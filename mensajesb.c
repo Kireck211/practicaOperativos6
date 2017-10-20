@@ -45,8 +45,8 @@ void emisor()
 		m.msg_type=1;
 		sprintf(m.mensaje,"Hola, este es el mensaje %d",i);
 		msgsnd(msgqid,&m,sizeof(MSGTYPE)-sizeof(long),0);
-		printf("\t\t\t\tNo. %d Mensaje enviado\n",i);
-		sleep(rand()%3);
+		printf("\t\t\t\tMensaje enviado\n");
+		sleep(3);
 	}
 	m.msg_type=1;
 	strcpy(m.mensaje,"Fin");
@@ -62,6 +62,7 @@ void receptor()
 	
 	do
 	{
+		printf("Despues de esta instruccion revisa\n");
 		retval=msgrcv(msgqid,&m,sizeof(MSGTYPE)-sizeof(long),1,0);
 		printf("Recibido: %s\n",m.mensaje);
 	}
