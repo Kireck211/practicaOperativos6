@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 #define CICLOS 10
 char *pais[3]={"Peru","Bolvia","Colombia"};
 int *g;
