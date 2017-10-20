@@ -1,0 +1,25 @@
+send()
+	
+	decrementas contador
+	si contador < 0
+		bloqueo proceso que llamó
+	metes el mensaje al buzón
+
+
+receive()
+	
+	incrementas contador
+	pop_front mensaje	
+	si contador <= 0
+		top_front del siguiente mensaje/proceso
+		desbloqueo el mensaje
+
+
+contador = -2
+
+A,B,C
+
+   + +
+|B|C|A|
+
+
